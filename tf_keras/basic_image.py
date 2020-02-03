@@ -38,7 +38,8 @@ if __name__ == '__main__':
     ])
 
     model.compile(optimizer = 'adam', loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
-
     test_loss, test_acc = model.evaluate(test_images, test_labels, verbose = 2)
-
-    model.fit(train_images, train_labels, epochs = 10)
+    model.fit(train_images, train_labels, epochs = 5)
+    show_mnist_sample_2()
+    predictions = model.predict(test_images)
+    np.argmax(predictions[0])
