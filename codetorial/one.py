@@ -4,6 +4,8 @@
 from tensorflow import keras
 
 """
+http://codetorial.net/tensorflow/index.html
+
 1. MNIST 데이터 셋 임포트
 load_data() 를 통해 4개의 변수에 NumPy Array 를 반환
 x_train, x_test 는 28x28 픽셀의 손글씨 이미지 데이터
