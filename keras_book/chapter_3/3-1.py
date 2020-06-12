@@ -32,9 +32,12 @@ history = history.history
 loss = history['loss']
 accuracy = history['accuracy']
 
-plt.plot(range(1, len(loss) + 1), loss, 'bo', label = 'Loss')
+plt.plot(range(1, len(loss) + 1), loss, 'r', label = 'Loss')
 plt.plot(range(1, len(accuracy) + 1), accuracy, 'b', label = 'Accuracy')
 plt.ylabel('Loss')
 plt.xlabel('Epochs')
 plt.legend()
 plt.show()
+
+model.fit(x_train, y_train, epochs = 4, batch_size = 512)
+result = model.evaluate(x_test, y_test)
