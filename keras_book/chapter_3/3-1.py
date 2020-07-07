@@ -39,5 +39,5 @@ plt.xlabel('Epochs')
 plt.legend()
 plt.show()
 
-model.fit(x_train, y_train, epochs = 4, batch_size = 512)
-result = model.evaluate(x_test, y_test)
+# model.fit(x_train, y_train, epochs = 4, batch_size = 512)
+# result = model.evaluate(x_test, y_test)
