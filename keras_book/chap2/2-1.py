@@ -3,6 +3,7 @@ from keras.datasets import mnist
 from keras.utils import to_categorical
 
 (train_image, train_label), (test_image, test_label) = mnist.load_data()
+train_image_copy, train_label_copy, test_image_copy, test_label_copy = train_image, train_label, test_image, test_label
 
 model = models.Sequential()
 model.add(layers.Dense(512, activation = 'relu', input_shape = (28 * 28,)))
