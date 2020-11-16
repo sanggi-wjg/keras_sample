@@ -33,7 +33,6 @@ result_history = history.history
 val_loss, val_acc, loss, acc = result_history['val_loss'], result_history['val_accuracy'], result_history['loss'], result_history['accuracy']
 
 epochs = range(1, len(val_loss) + 1)
-
 plt.rcParams["figure.figsize"] = (20, 15)
 plt.rcParams["axes.grid"] = True
 
@@ -48,3 +47,5 @@ plt.plot(epochs, val_acc, 'b', label = 'Validation Accuracy')
 plt.legend()
 
 plt.show()
+
+model.evaluate(x_test, y_test, batch_size = 512)

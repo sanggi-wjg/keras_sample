@@ -21,3 +21,6 @@ test_label = to_categorical(test_label)
 
 model.fit(train_image, train_label, epochs = 5, batch_size = 128)
 test_loss, test_acc = model.evaluate(test_image, test_label)
+
+predicted = model.predict(test_image)
+model.summary()
